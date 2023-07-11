@@ -11,6 +11,10 @@ article.tweet {
   flex-direction: column;
 }
 
+img.display {
+  height: 64px;
+}
+
 article.tweet header {
   display: flex;
   justify-content: space-between;
