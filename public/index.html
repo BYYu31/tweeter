@@ -60,6 +60,8 @@
 
     <!-- First Section, create new tweets -->
     <section class="new-tweet">
+      <span class="error" id="error-nothing">you got nothing</span>
+      <span class="error" id="error-too-long">too many characters</span>
       <h2>Compose Tweet</h2>
       <form action="/tweets/" method="POST">
         <label for="tweet-text"><span>

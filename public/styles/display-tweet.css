@@ -4,6 +4,14 @@ section.tweet {
   margin-right: 2.5em;
 }
 
+.error {
+  margin-top: 10px;
+  border: solid red;
+  color: red;
+  display: flex;
+  justify-content:flex-start;
+}
+
 article.tweet {
   padding-left: 0.5em;
   padding-right: 0.5em;

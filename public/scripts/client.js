@@ -29,16 +29,28 @@
 //   }
 // ]
 
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 $(document).ready(function () {
   loadtweets();
+  $("#error-nothing").hide();
+  $("#error-too-long").hide();
   // something happens when you submit
   $("form").on("submit", (event) => {
     event.preventDefault();
     if (!$("#tweet-text").val() || $("#tweet-text").val().trim() === "") {
-      alert('write something down!');
+      $('#error-nothing').slideDown('slow');
+      $("#error-too-long").hide();
     } else if ($("#tweet-text").val().length > 140) {
-      alert('too many words')
+      $("#error-too-long").slideDown('slow');
+      $("#error-nothing").hide();
     } else {
+      $("#error-nothing").hide();
+      $("#error-nothing").hide();
       postTweetData();
     }
   });
@@ -67,7 +79,7 @@ const createTweetElement = function (tweet) {
       <span class="handle">${tweet.user.handle}</span>
     </header>
     <span class="tweet">
-      ${tweet.content.text}
+      ${escape(tweet.content.text)}
     </span>
     <footer class="tweet-footer" >
     <span class="timeago">${timeago.format(tweet.created_at)}</span>
