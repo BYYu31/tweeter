@@ -44,7 +44,7 @@ $(document).ready(function() {
         ${tweet.content.text}
       </span>
       <footer class="tweet-footer" >
-      <span>${tweet.created_at}</span>
+      <span class="timeago">${timeago.format(tweet.created_at)}</span>
       <div class="icons">
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -63,7 +63,8 @@ $(document).ready(function() {
     } 
   };
 
-  renderTweets(data);
+  // to test if renderTweets function can render information
+  // renderTweets(data);
 
   // something happens when you submit
   $("form").on("submit", (event) => {
@@ -71,6 +72,25 @@ $(document).ready(function() {
     console.log("here");
     postTweetData();
   });
+
+  // get tweets
+  const loadtweets = () => {
+    $.ajax({
+      url: "/tweets",
+      type: "GET",
+      dataType: "json",
+      success: (result) => {
+        console.log(result);
+        console.log('yes sir~');
+        renderTweets(result);
+      },
+      error: (error) => {
+        console.log("lolz you have failed, ", error);
+      }
+    })
+  };
+  loadtweets();
+
 });
 
 
