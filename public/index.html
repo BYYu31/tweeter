@@ -26,7 +26,9 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
@@ -49,9 +51,8 @@
     <div>
       <img src="/images/profile-hex.png">
     </div>
-    <br>
     <div>
-      <h2>Your Name</h2>
+      <h2>Bo Yang Yu</h2>
     </div>
   </header>
 
@@ -62,7 +63,6 @@
     <section class="new-tweet">
       <span class="error" id="error-nothing">you got nothing</span>
       <span class="error" id="error-too-long">too many characters</span>
-      <h2>Compose Tweet</h2>
       <form action="/tweets/" method="POST">
         <label for="tweet-text"><span>
             <bold>What are you humming about?</bold>
@@ -77,27 +77,7 @@
     <br>
     <!-- Secontd Section, display all tweets-->
     <section class="tweet tweets-container" id="tweets-container">
-      <!-- Place holder data below -->
-      <!-- <article class="tweet">
-        <header class="tweet-header">
-          <div>
-            <img class="display" src="https://i.imgur.com/73hZDYK.png" />
-            <h3>#NAME</h3>
-          </div>
-          <span class="handle">@HANDLE</span>
-        </header>
-        <span class="tweet">
-          TWEET PLACEHOLDER!
-        </span>
-        <footer class="tweet-footer">
-          <span>#date ago</span>
-          <div class="icons">
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article> -->
+      <!-- client.js to provide info to render on client side -->
     </section>
   </main>
 </body>

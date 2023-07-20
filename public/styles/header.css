@@ -1,10 +1,21 @@
 header.title {
   background-color: rgb(222, 163, 53);
   height: 400px;
+  width: 100%;
   top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-dark.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+@media only screen and (min-width: 1024px) {
+  header.title {
+    width: 33%;
+    /* float:left; */
+    margin-left: 50px;
+    margin-top:50px;
+  }
 }

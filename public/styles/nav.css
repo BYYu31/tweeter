@@ -27,6 +27,23 @@ bold {
   font-weight: bold;
 }
 
-.fa-angles-down {
+nav div i {
   color: red;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+}
+
+@media only screen and (max-width: 1024px) {
+  nav {
+    display: none;
+  }
 }
