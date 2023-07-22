@@ -12,15 +12,15 @@ section.tweet {
   justify-content:flex-start;
 }
 
+img.display {
+  height: 64px;
+}
+
 article.tweet {
   padding-left: 0.5em;
   padding-right: 0.5em;
   display: flex;
   flex-direction: column;
-}
-
-img.display {
-  height: 64px;
 }
 
 article.tweet header {
