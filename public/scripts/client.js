@@ -29,13 +29,13 @@
 //   }
 // ]
 
-const escape = function (str) {
+const escape = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-$(document).ready(function () {
+$(document).ready(function() {
   loadtweets();
   $("#error-nothing").hide();
   $("#error-too-long").hide();
@@ -65,10 +65,10 @@ const postTweetData = () => {
     //console.log(result);
     loadtweets();
     $("form")[0].reset();
-  })
-}
+  });
+};
 
-const createTweetElement = function (tweet) {
+const createTweetElement = function(tweet) {
   const $tweetElement = `
   <article class="tweet">
     <header class="tweet-header">
@@ -94,7 +94,7 @@ const createTweetElement = function (tweet) {
   return $tweetElement;
 };
 
-const renderTweets = function (tweetArr) {
+const renderTweets = function(tweetArr) {
   $(".tweets-container").empty();
   for (let tweet of tweetArr) {
     let $tweetElement = createTweetElement(tweet);
@@ -116,5 +116,5 @@ const loadtweets = () => {
     error: (error) => {
       console.log("lolz you have failed, ", error);
     }
-  })
+  });
 };

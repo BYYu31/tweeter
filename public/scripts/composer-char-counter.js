@@ -8,5 +8,5 @@ $(document).ready(function() {
     } else {
       $(this).closest(".new-tweet").find(".counter").removeClass('red-color');
     }
-  })
+  });
 });
