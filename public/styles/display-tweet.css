@@ -1,5 +1,4 @@
 section.tweet {
-  border: solid;
   margin-left: 2.5em;
   margin-right: 2.5em;
 }
@@ -21,6 +20,12 @@ article.tweet {
   padding-right: 0.5em;
   display: flex;
   flex-direction: column;
+  border: solid;
+  margin-bottom: 10px;
+}
+
+article.tweet:hover {
+  box-shadow: 5px 5px 5px rgb(135, 151, 247);
 }
 
 article.tweet header {
@@ -37,6 +42,7 @@ header.tweet-header div {
 }
 
 span.tweet {
+  overflow-wrap: break-word;
   border-bottom: solid thick;
   padding-bottom: 1.5em;
   margin-bottom: 10px;

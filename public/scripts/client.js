@@ -63,7 +63,11 @@ const postTweetData = () => {
   //console.log(data);
   $.post("/tweets/", data).then((result) => {
     //console.log(result);
+    
     loadtweets();
+    $(".counter").html('140');
+    $("#error-nothing").hide();
+    $("#error-too-long").hide();
     $("form")[0].reset();
   });
 };
